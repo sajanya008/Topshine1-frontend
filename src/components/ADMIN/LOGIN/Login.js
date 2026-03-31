@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Login.css"; // 🔥 import css
+import { useState } from "react";
+
+import "./Login.css"; 
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const navigate = useNavigate();
+ 
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ const AdminLogin = () => {
 
       localStorage.setItem("token", data.token);
 
-      // 🔥 back button safe
+      
       window.location.replace("/dashboard");
 
     } catch (err) {

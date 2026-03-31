@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import  { useState } from "react";
+import { NavLink } from "react-router-dom";
 import {
   FaHome,
   
@@ -18,38 +18,13 @@ import LogoutButton from "../LOGOUT/Logout";
 function Sidebar() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const navigate = useNavigate();
+  
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-  /* LOGOUT FUNCTION */
-
-  const handleLogout = async () => {
-
-    try {
-
-      const token = localStorage.getItem("adminToken");
-
-      await fetch("https://topshine-backend.onrender.com/api/admin/logout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token
-        }
-      });
-
-    } catch (err) {
-      console.log(err);
-    }
-
-    localStorage.removeItem("adminToken");
-
-    navigate("/admin/login", { replace: true });
-
-  };
-
+  
 
   return (
     <>
