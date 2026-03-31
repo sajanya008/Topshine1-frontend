@@ -4,6 +4,9 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaWha
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // Get admin login info from localStorage
+  const admin = JSON.parse(localStorage.getItem("admin")); // should be set on login
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -41,7 +44,6 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/admin/login">Admin</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/service">Services</Link></li>
             <li><Link to="/pricepage">Pricing</Link></li>
@@ -49,6 +51,14 @@ const Footer = () => {
             <li><Link to="/ourteam">Our Team</Link></li>
             <li><Link to="/ourworks">Our Works</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+
+            {/* Admin login/dashboard */}
+            {!admin && (
+              <li><Link to="/admin/login">Admin Login</Link></li>
+            )}
+            {admin && (
+              <li><Link to="/dashboard">Dashboard</Link></li>
+            )}
           </ul>
         </div>
 
