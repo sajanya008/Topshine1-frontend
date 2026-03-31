@@ -1,0 +1,193 @@
+/* ===============================
+   NAVBAR
+================================= */
+
+.custom-navbar {
+  background: #ffffff;
+  height: 80px;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+/* Navbar dark when menu open */
+.custom-navbar.menu-open {
+  background: #004aad;
+}
+
+/* Prevent content hiding */
+body {
+  padding-top: 90px;
+  margin: 0;
+}
+
+/* Container alignment */
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===============================
+   LOGO
+================================= */
+
+.nav-logo {
+  margin-top: 9px;
+  width: 250px;
+  height: auto;
+}
+
+/* ===============================
+   NAV LINKS
+================================= */
+
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #111 !important;
+  margin: 0 14px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #004aad !important;
+}
+
+/* Active normal links */
+.nav-link.active:not(.booking-btn) {
+  color: #5aa9ff !important;
+  font-weight: 600;
+}
+
+/* ===============================
+   BOOK BUTTON
+================================= */
+
+.booking-btn {
+  background: rgb(84, 195, 231);
+  color: #ffffff !important;
+  padding: 8px 22px;
+  border-radius: 25px;
+  font-weight: 500;
+  border: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.booking-btn:hover {
+  background: #40b3e0;
+  color: #ffffff !important;
+}
+
+/* IMPORTANT: keep button look even when active */
+.booking-btn.active,
+.nav-link.booking-btn.active {
+  background: rgb(10, 152, 199) !important;
+  color: #ffffff !important;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+/* ===============================
+   TOGGLER
+================================= */
+
+.navbar-toggler {
+  border: 2px solid #004aad;
+  padding: 6px 10px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* 3 horizontal lines */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23004aad' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ===============================
+   TABLET / MOBILE
+================================= */
+
+@media (max-width: 991px) {
+
+  .custom-navbar {
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .nav-logo {
+    width: 95px;
+  }
+
+  /* Mobile menu */
+  .navbar-collapse {
+    background: #004aad;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  /* Menu links */
+  .nav-link {
+    display: block;
+    margin: 12px 0;
+    font-size: 17px;
+    color: #ffffff !important;
+  }
+
+  .nav-link:hover {
+    color: #9ad0ff !important;
+  }
+
+  /* Active link mobile */
+  .nav-link.active:not(.booking-btn) {
+    color: #9ad0ff !important;
+  }
+
+  /* Book button mobile */
+  .booking-btn {
+    background: #ffffff;
+    color: #004aad !important;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+
+  .booking-btn:hover {
+    background: #e6f0ff;
+    color: #004aad !important;
+  }
+
+  /* Active book button mobile */
+  .booking-btn.active {
+    background: #ffffff !important;
+    color: #004aad !important;
+  }
+
+}
+
+/* ===============================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .nav-logo {
+    width: 85px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+}

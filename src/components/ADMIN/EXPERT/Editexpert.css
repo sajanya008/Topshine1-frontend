@@ -1,0 +1,280 @@
+/* ===============================
+GLOBAL
+=============================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f5f7fb;
+overflow-x:hidden;
+}
+
+
+/* ===============================
+ADMIN LAYOUT
+=============================== */
+
+.admin-container{
+display:flex;
+min-height:100vh;
+background:#f5f7fb;
+}
+
+/* ===============================
+MAIN CONTENT
+=============================== */
+
+.admin-content{
+margin-left:230px;
+flex:1;
+padding:30px;
+min-height:100vh;
+overflow-y:auto;
+transition:0.3s;
+}
+
+
+/* ===============================
+MENU ICON
+=============================== */
+
+.menu-icon{
+font-size:22px;
+cursor:pointer;
+margin-bottom:20px;
+display:none;
+}
+
+
+/* ===============================
+FORM WRAPPER
+=============================== */
+
+.edit-expert-wrapper{
+display:flex;
+justify-content:center;
+align-items:flex-start;
+width:100%;
+}
+
+
+/* ===============================
+FORM CARD
+=============================== */
+
+.form-card{
+
+width:100%;
+max-width:520px;
+
+background:white;
+
+padding:30px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+/* ===============================
+TITLE
+=============================== */
+
+.form-title{
+text-align:center;
+margin-bottom:25px;
+color:#072946;
+font-size:24px;
+}
+
+
+/* ===============================
+FORM
+=============================== */
+
+.expert-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+
+/* INPUT */
+
+.expert-form input{
+
+padding:11px 14px;
+
+border-radius:6px;
+
+border:1px solid #ccc;
+
+outline:none;
+
+font-size:14px;
+
+transition:0.2s;
+
+}
+
+.expert-form input:focus{
+border-color:#07458b;
+box-shadow:0 0 3px rgba(7,69,139,0.2);
+}
+
+
+/* ===============================
+IMAGE PREVIEW
+=============================== */
+
+.image-preview{
+
+width:120px;
+height:120px;
+
+object-fit:cover;
+
+border-radius:8px;
+
+margin:10px auto;
+
+}
+
+
+/* ===============================
+SUBMIT BUTTON
+=============================== */
+
+.submit-btn{
+
+background:#28a745;
+color:white;
+
+border:none;
+
+padding:11px;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-size:15px;
+
+transition:0.2s;
+
+}
+
+.submit-btn:hover{
+background:#23923d;
+}
+
+
+/* ===============================
+SCROLLBAR STYLE
+=============================== */
+
+.admin-content::-webkit-scrollbar{
+width:8px;
+}
+
+.admin-content::-webkit-scrollbar-track{
+background:#e6e6e6;
+}
+
+.admin-content::-webkit-scrollbar-thumb{
+background:#9e9e9e;
+border-radius:10px;
+}
+
+.admin-content::-webkit-scrollbar-thumb:hover{
+background:#7d7d7d;
+}
+
+
+/* ===============================
+LAPTOP
+=============================== */
+
+@media(max-width:1200px){
+
+.admin-content{
+padding:25px;
+}
+
+}
+
+
+/* ===============================
+TABLET
+=============================== */
+
+@media(max-width:992px){
+
+.admin-content{
+margin-left:200px;
+padding:25px;
+}
+
+.form-card{
+max-width:480px;
+}
+
+}
+
+
+/* ===============================
+MOBILE
+=============================== */
+
+@media(max-width:768px){
+
+.admin-content{
+margin-left:0;
+padding:20px;
+}
+
+.menu-icon{
+display:block;
+}
+
+.form-card{
+padding:25px;
+max-width:100%;
+}
+
+}
+
+
+/* ===============================
+SMALL MOBILE
+=============================== */
+
+@media(max-width:480px){
+
+.form-card{
+padding:20px;
+}
+
+.form-title{
+font-size:20px;
+}
+
+.image-preview{
+width:100px;
+height:100px;
+}
+
+.submit-btn{
+font-size:14px;
+padding:10px;
+}
+
+}

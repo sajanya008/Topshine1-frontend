@@ -1,0 +1,139 @@
+/* ==============================
+   SECTION
+============================== */
+.recent-section {
+  padding: 70px 0;
+  background: white;
+  overflow: hidden;
+}
+
+.explore-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 100px;
+}
+
+.sub-titlee {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 15px;
+  color: #3bbbf7; /* orange color */
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 
+.sub-titlee {
+  color: rgb(10, 152, 199);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-align: center;
+} */
+
+
+/* HEADING */
+.recentwrk-title {
+  font-size: 44px;
+  text-align: center;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  color: #051a52;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+/* ==============================
+   SLIDER
+============================== */
+.recent-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Moving track */
+.recent-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+/* Pause on hover */
+.recent-slider:hover .recent-track {
+  animation-play-state: paused;
+}
+
+/* ==============================
+   CARD
+============================== */
+.recent-card {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  max-width: 350px;        /* Controls desktop size */
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Effect */
+.recent-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* .recent-card:hover {
+  transform: translateY(-8px);
+} */
+
+.recent-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==============================
+   OVERLAY
+============================== */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.recent-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.overlay p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* ==============================
+   ANIMATION
+============================== */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,191 @@
+/* ================= SECTION ================= */
+.expert-section {
+  background: #f8fbff;
+  padding: 90px 0;
+  font-family: "Nunito", sans-serif;
+}
+
+/* ================= CONTAINER ================= */
+.expert-container {
+  width: 85%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+/* ================= HEADER ================= */
+.expert-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.expert-header h4 {
+  font-family:'Kaushan Script',cursive;
+  font-size:16px;
+  color:#3bbbf7;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.expert-header h2 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-top: 12px;
+  color: #021950;
+}
+
+.expert-header p {
+  color: #110f0f;
+  margin-top: 10px;
+  font-size: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= GRID ================= */
+.expert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+/* ================= CARD ================= */
+.expert-card {
+  text-align: center;
+  transition: all 0.4s ease;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= IMAGE ================= */
+.expert-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 30px;
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+}
+
+.expert-card:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+}
+
+/* ================= NAME ================= */
+.expert-card h4 {
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ================= DESIGNATION ================= */
+.position {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ================= NATIONALITY ================= */
+.nationality {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.expert-card:hover .nationality {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* ================= LARGE SCREEN ================= */
+@media (max-width: 1200px) {
+  .expert-container {
+    width: 90%;
+  }
+  .expert-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .expert-container {
+    width: 92%;
+  }
+  .expert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .expert-card img {
+    height: 300px;
+  }
+  .expert-header h2 {
+    font-size: 34px;
+  }
+  .expert-header p {
+    font-size: 14px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .expert-section {
+    padding: 60px 15px;
+  }
+  .expert-container {
+    width: 95%;
+  }
+  .expert-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .expert-card img {
+    height: 260px;
+  }
+  .expert-header h2 {
+    font-size: 28px;
+  }
+  .expert-header p {
+    font-size: 14px;
+  }
+  .expert-card h4 {
+    font-size: 17px;
+  }
+  .position {
+    font-size: 13px;
+  }
+  .nationality {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .expert-card img {
+    height: 240px;
+  }
+  .expert-header h2 {
+    font-size: 24px;
+  }
+  .expert-header h4 {
+    font-size: 15px;
+  }
+  .position {
+    font-size: 12px;
+  }
+  .nationality {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}

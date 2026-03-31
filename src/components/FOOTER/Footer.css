@@ -1,0 +1,157 @@
+/* ================= FOOTER ================= */
+.footer {
+  background: #030114;
+  color: #fff;
+  padding: 70px 80px 25px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= GRID ================= */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  gap: 60px;
+}
+
+/* ================= LOGO & COMPANY ================= */
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0a98c7;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+/* ================= CONTACT ================= */
+.footer-contact p {
+  font-size: 14px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  color: #ccc;
+}
+
+.contact-icon {
+  margin-right: 8px;
+  color: #04b2e7;
+}
+
+/* ================= SOCIAL ICONS ================= */
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #0a98c7;
+  transform: scale(1.1);
+}
+
+/* ================= HEADINGS ================= */
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #4fbde2;
+  font-weight: 700;
+}
+
+/* ================= LISTS ================= */
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #0a98c7;
+  transform: translateX(5px);
+}
+
+/* ================= BOTTOM ================= */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .footer-social {
+    justify-content: flex-start; /* left align social icons */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: left; /* left align all text */
+  }
+
+  .footer-social {
+    justify-content: flex-start; /* left align social icons */
+  }
+
+  .footer-contact p {
+    justify-content: flex-start; /* left align contact info */
+  }
+
+  .footer ul li {
+    text-align: left; /* list items left */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .footer-col h4 {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .footer ul li {
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .footer-social a {
+    font-size: 18px;
+  }
+}

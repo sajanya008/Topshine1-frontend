@@ -1,0 +1,262 @@
+/* ===============================
+   RESET
+=================================*/
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* ===============================
+   MAIN SECTION
+=================================*/
+.reservation-section{
+margin-top: 80px;
+margin-bottom: 80px;
+display:flex;
+align-items:stretch;
+min-height:300px;
+font-family:'Segoe UI',sans-serif;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+background:#ffffff;
+}
+
+/* ===============================
+   LEFT IMAGE
+=================================*/
+.reservation-image{
+flex:1;
+position:relative;
+overflow:hidden;
+min-height:450px;
+}
+
+.reservation-image img{
+position:absolute;
+top:-10px;
+bottom:-10px;
+left:0;
+width:100%;
+height:calc(100% + 20px);
+object-fit:cover;
+object-position:top;
+transition:0.5s ease;
+}
+
+.reservation-image img:hover{
+transform:scale(1.05);
+}
+
+/* ===============================
+   RIGHT FORM
+=================================*/
+.reservation-form{
+flex:1;
+background:linear-gradient(135deg,#041c3d,#063c6d);
+padding:60px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* SMALL TITLE */
+.small-title{
+font-family:'Kaushan Script',cursive;
+font-size:20px;
+color:#3bbbf7;
+font-weight:400;
+margin-bottom:8px;
+}
+
+/* ERROR */
+.error{
+color:#ff6b6b;
+font-size:13px;
+margin-top:5px;
+}
+
+/* HEADING */
+.reservation-form h1{
+font-size:34px;
+margin-bottom:35px;
+font-weight:800;
+font-family:"Nunito",sans-serif;
+}
+
+/* ===============================
+   FORM ROW
+=================================*/
+.form-row{
+display:flex;
+gap:18px;
+margin-bottom:18px;
+}
+
+.form-row div{
+width:100%;
+}
+
+/* ===============================
+   INPUTS
+=================================*/
+input,
+select,
+textarea{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:none;
+background:#f1f5f9;
+font-size:14px;
+transition:0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+outline:none;
+background:#ffffff;
+box-shadow:0 0 0 2px #53bce6;
+}
+
+textarea{
+margin-bottom:25px;
+resize:none;
+height:110px;
+}
+
+/* ===============================
+   BUTTON
+=================================*/
+.reserve-btn{
+width:100%;
+padding:14px;
+background:linear-gradient(135deg,#53bce6,#08719b);
+border:none;
+color:white;
+font-weight:600;
+border-radius:10px;
+cursor:pointer;
+letter-spacing:1px;
+transition:0.3s ease;
+}
+
+.reserve-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   LAPTOP
+=================================*/
+@media (max-width:1200px){
+
+.reservation-form{
+padding:50px;
+}
+
+}
+
+/* ===============================
+   TABLET
+=================================*/
+@media (max-width:992px){
+
+.reservation-section{
+flex-direction:column;
+}
+
+.reservation-image{
+height:320px;
+min-height:320px;
+}
+
+/* FIX IMAGE CROP */
+.reservation-image img{
+position:relative;
+top:0;
+bottom:0;
+height:100%;
+object-fit:cover;
+object-position:top;
+}
+
+.reservation-form{
+padding:40px;
+}
+
+.reservation-form h1{
+font-size:30px;
+}
+
+}
+
+/* ===============================
+   MOBILE
+=================================*/
+@media (max-width:768px){
+
+.reservation-form{
+padding:35px 25px;
+}
+
+.form-row{
+flex-direction:column;
+gap:12px;
+}
+
+.reservation-form h1{
+font-size:28px;
+}
+
+}
+
+/* ===============================
+   SMALL MOBILE
+=================================*/
+@media (max-width:576px){
+
+.reservation-image img{
+height:auto;
+object-fit:contain;
+}
+
+.reservation-form{
+padding:30px 18px;
+}
+
+.reservation-form h1{
+font-size:24px;
+}
+
+input,
+select,
+textarea{
+padding:12px;
+font-size:13px;
+}
+
+.reserve-btn{
+padding:12px;
+font-size:14px;
+}
+
+}
+
+/* ===============================
+   EXTRA SMALL
+=================================*/
+@media (max-width:360px){
+
+.reservation-form h1{
+font-size:22px;
+}
+
+.small-title{
+font-size:18px;
+}
+
+}

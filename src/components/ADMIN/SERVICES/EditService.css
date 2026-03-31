@@ -1,0 +1,248 @@
+/* ===============================
+   PAGE LAYOUT
+================================= */
+
+.edit-service-container{
+display:flex;
+height:100vh;
+background:#f4f6fb;
+overflow:hidden;
+}
+
+
+/* ===============================
+   SIDEBAR FIXED
+================================= */
+
+.sidebar{
+position:fixed;
+top:0;
+left:0;
+width:230px;
+height:100vh;
+z-index:1000;
+}
+
+
+/* ===============================
+   CONTENT AREA
+================================= */
+
+.edit-service-content{
+
+flex:1;
+
+margin-left:230px;
+
+height:100vh;
+
+overflow-y:auto;      /* ✅ ONLY CONTENT SCROLL */
+
+padding:40px 20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-start;
+
+}
+
+
+/* ===============================
+   FORM CARD
+================================= */
+
+.edit-service-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:10px;
+
+width:100%;
+max-width:420px;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+/* ===============================
+   TITLE
+================================= */
+
+.edit-service-card h3{
+text-align:center;
+margin-bottom:20px;
+color:#072946;
+}
+
+
+/* ===============================
+   LABEL
+================================= */
+
+.edit-service-card label{
+font-weight:600;
+font-size:14px;
+margin-bottom:6px;
+display:block;
+color:#072946;
+}
+
+
+/* ===============================
+   INPUT
+================================= */
+
+.edit-service-card input,
+.edit-service-card textarea{
+
+width:100%;
+
+padding:10px;
+
+margin-bottom:15px;
+
+border:1px solid #ccc;
+
+border-radius:6px;
+
+font-size:14px;
+
+outline:none;
+
+transition:0.2s;
+
+}
+
+
+/* INPUT FOCUS */
+
+.edit-service-card input:focus,
+.edit-service-card textarea:focus{
+border-color:#007bff;
+}
+
+
+/* ===============================
+   TEXTAREA
+================================= */
+
+.edit-service-card textarea{
+resize:none;
+min-height:90px;
+}
+
+
+/* ===============================
+   CURRENT IMAGE
+================================= */
+
+.current-image img{
+
+width:100%;
+
+border-radius:6px;
+
+margin-top:5px;
+
+margin-bottom:15px;
+
+border:1px solid #ddd;
+
+}
+
+
+/* ===============================
+   FILE NAME
+================================= */
+
+.file-name{
+font-size:13px;
+color:#555;
+margin-bottom:12px;
+}
+
+
+/* ===============================
+   BUTTON
+================================= */
+
+.update-btn{
+
+width:100%;
+
+padding:11px;
+
+background:#28a745;
+
+border:none;
+
+border-radius:6px;
+
+color:white;
+
+font-size:15px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.update-btn:hover{
+background:#218838;
+}
+
+
+/* ===============================
+   SCROLL BAR STYLE
+================================= */
+
+.edit-service-content::-webkit-scrollbar{
+width:10px;
+}
+
+.edit-service-content::-webkit-scrollbar-thumb{
+background:#ccc;
+border-radius:10px;
+}
+
+
+/* ===============================
+   TABLET
+================================= */
+
+@media(max-width:992px){
+
+.edit-service-content{
+padding:30px 15px;
+}
+
+}
+
+
+/* ===============================
+   MOBILE
+================================= */
+
+@media(max-width:768px){
+
+.sidebar{
+left:-230px
+}
+
+.edit-service-content{
+margin-left:0;
+padding:20px;
+}
+
+.edit-service-card{
+max-width:100%;
+padding:25px;
+}
+
+}

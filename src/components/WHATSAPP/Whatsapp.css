@@ -1,0 +1,107 @@
+/* ==============================
+WHATSAPP FLOAT BUTTON (LEFT SIDE)
+================================= */
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  left: 25px; /* changed from right to left */
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* auto zoom animation */
+  animation: whatsappZoom 1.6s infinite alternate;
+}
+
+/* Icon */
+.whatsapp-float i {
+  font-size: 32px;
+}
+
+/* Hover Effect */
+.whatsapp-float:hover {
+  transform: scale(1.25);
+  background: #1ebe5d;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* Zoom Animation */
+@keyframes whatsappZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+/* ==============================
+PULSE RING EFFECT
+================================= */
+
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.4);
+  z-index: -1;
+
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* ==============================
+RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+    bottom: 20px;
+    left: 20px; /* changed from right to left */
+  }
+
+  .whatsapp-float i {
+    font-size: 28px;
+  }
+
+  .whatsapp-float::before {
+    width: 55px;
+    height: 55px;
+  }
+
+}

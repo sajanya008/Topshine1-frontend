@@ -1,0 +1,149 @@
+/* GLOBAL */
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f6fa;
+}
+
+/* ADMIN LAYOUT */
+
+.admin-container{
+display:flex;
+min-height:100vh;
+}
+
+/* MAIN CONTENT */
+
+.admin-content{
+flex:1;
+margin-left:230px;
+padding:20px 30px;
+min-height:100vh;
+}
+
+
+/* FORM CARD */
+
+.form-card{
+background:white;
+padding:15px;
+border-radius:10px;
+max-width:400px;
+margin:0 auto;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-card h3{
+text-align:center;
+color:#072946;
+margin-bottom:12px;
+font-size:18px;
+}
+
+
+/* FORM */
+
+form label{
+display:block;
+font-weight:500;
+margin-bottom:4px;
+color:#072946;
+text-align:left;
+}
+
+form input,
+form textarea{
+
+width:100%;
+padding:8px;
+margin-bottom:8px;
+
+border:1px solid #ccc;
+border-radius:6px;
+
+font-size:13px;
+outline:none;
+}
+
+form textarea{
+resize:none;
+min-height:60px;
+}
+
+
+/* IMAGE PREVIEW */
+
+.preview-img{
+width:100%;
+border-radius:6px;
+margin-bottom:10px;
+}
+
+
+/* BUTTON */
+
+.submit-btn{
+width:100%;
+padding:8px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:6px;
+font-size:13px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.submit-btn:hover{
+background:#23923d;
+}
+
+
+/* TABLET */
+
+@media(max-width:992px){
+
+.admin-content{
+margin-left:200px;
+padding:20px;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.admin-content{
+margin-left:0;
+padding:15px 20px;
+}
+
+.form-card{
+max-width:100%;
+}
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+.form-card{
+padding:12px;
+}
+
+form input,
+form textarea{
+font-size:12px;
+padding:6px;
+}
+
+.form-card h3{
+font-size:16px;
+}
+
+}

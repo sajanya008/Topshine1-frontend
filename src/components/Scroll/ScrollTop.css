@@ -1,0 +1,33 @@
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background: #4cb8eb;
+  color: #f7f4f4;
+  border: none;
+  border-radius: 50%; /* circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+  background: #4cb8eb;
+}
+
+.scroll-top svg {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}

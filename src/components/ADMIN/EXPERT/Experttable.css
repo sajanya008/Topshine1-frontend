@@ -1,0 +1,358 @@
+/* =========================
+BODY
+========================= */
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f5f7fb;
+overflow:hidden;
+}
+
+
+/* =========================
+ADMIN LAYOUT
+========================= */
+
+.admin-container{
+display:flex;
+height:100vh;
+overflow:hidden;
+}
+
+
+/* =========================
+SIDEBAR
+========================= */
+
+.sidebar{
+
+width:230px;
+height:100vh;
+
+background:#060633;
+color:white;
+
+position:fixed;
+top:0;
+left:0;
+
+padding:20px;
+
+overflow:hidden;
+
+z-index:1000;
+
+}
+
+
+/* =========================
+CONTENT AREA
+========================= */
+
+.admin-content{
+
+margin-left:230px;
+
+height:100vh;
+
+overflow-y:auto;
+
+padding:20px;
+
+flex:1;
+
+}
+
+
+
+/* =========================
+TOPBAR
+========================= */
+
+.topbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:20px;
+flex-wrap:wrap;
+gap:10px;
+}
+
+
+/* =========================
+ADD BUTTON
+========================= */
+
+.add-btn{
+background:#28a745;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.add-btn:hover{
+background:#23923d;
+}
+
+
+/* =========================
+SEARCH
+========================= */
+
+.search-box{
+margin-bottom:20px;
+}
+
+.search-box input{
+
+padding:10px 14px;
+width:280px;
+
+border-radius:6px;
+border:1px solid #ccc;
+
+outline:none;
+
+}
+
+.search-box input:focus{
+border-color:#07458b;
+}
+
+
+/* =========================
+TABLE CARD
+========================= */
+
+.table-container{
+
+background:white;
+padding:20px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+overflow-x:auto;
+
+}
+
+
+/* =========================
+TABLE
+========================= */
+
+table{
+width:100%;
+border-collapse:collapse;
+min-width:650px;
+}
+
+thead{
+background:#072946;
+color:white;
+}
+
+th{
+padding:12px;
+text-align:left;
+}
+
+td{
+padding:14px;
+border-top:1px solid #eee;
+}
+
+tbody tr:hover{
+background:#fafafa;
+}
+
+
+/* =========================
+IMAGE
+========================= */
+
+.expert-img{
+width:55px;
+height:55px;
+object-fit:cover;
+border-radius:6px;
+}
+
+
+/* =========================
+BUTTONS
+========================= */
+
+.edit-btn{
+background:#28a745;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:5px;
+margin-right:6px;
+cursor:pointer;
+}
+
+.delete-btn{
+background:#dc3545;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+
+/* =========================
+NO DATA
+========================= */
+
+.no-data{
+text-align:center;
+padding:20px;
+color:#555;
+}
+
+
+/* =========================
+PAGINATION
+========================= */
+
+.pagination{
+
+margin-top:20px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+gap:15px;
+flex-wrap:wrap;
+
+}
+
+.pagination span{
+
+font-weight:500;
+color:#333;
+
+}
+
+.pagination button{
+
+padding:8px 16px;
+
+border:none;
+
+border-radius:6px;
+
+background:#072946;
+color:white;
+
+cursor:pointer;
+
+}
+
+.pagination button:hover{
+opacity:0.9;
+}
+
+.pagination button:disabled{
+
+background:#ccc;
+cursor:not-allowed;
+
+}
+
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:992px){
+
+.search-box input{
+width:220px;
+}
+
+table{
+min-width:600px;
+}
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.admin-content{
+margin-left:0;
+padding:15px;
+}
+
+.topbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.search-box input{
+width:100%;
+}
+
+th,td{
+font-size:14px;
+padding:10px;
+}
+
+.expert-img{
+width:45px;
+height:45px;
+}
+
+.edit-btn,
+.delete-btn{
+padding:5px 10px;
+font-size:13px;
+}
+
+}
+
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+.table-container{
+padding:15px;
+}
+
+th,td{
+font-size:13px;
+padding:8px;
+}
+
+.expert-img{
+width:40px;
+height:40px;
+}
+
+.add-btn{
+width:100%;
+text-align:center;
+}
+
+.pagination button{
+padding:6px 12px;
+font-size:14px;
+}
+
+}

@@ -1,0 +1,199 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+}
+
+/* LAYOUT */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: rgb(6,6,51);
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: 0.3s;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* CONTENT */
+.admin-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* TOGGLE BUTTON */
+.menu-icon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  background: #07458b;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1500;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background: #23923d;
+}
+
+/* SEARCH */
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px 14px;
+  width: 280px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #07458b;
+  box-shadow: 0 0 5px rgba(7,69,139,0.3);
+}
+
+/* TABLE CARD */
+.table-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(16,5,80,0.08);
+  overflow-x: auto;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+thead {
+  background: #072946;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+/* IMAGE */
+.wrk-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* BUTTONS */
+.deliver-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* NO DATA */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .menu-icon { display:block; }
+  .sidebar { position:fixed; left:-240px; top:0; height:100vh; z-index:1400; }
+  .sidebar.active { left:0; }
+  .sidebar.active ~ .admin-content .menu-icon { left:auto; right:15px; }
+  .admin-content { padding:20px; margin-top:50px; }
+  .search-box input { width:100%; }
+}
+
+@media(max-width:480px){
+  th, td { font-size:13px; padding:10px; }
+  .wrk-img { width:60px; height:60px; }
+  .add-btn { padding:6px 12px; font-size:13px; }
+}

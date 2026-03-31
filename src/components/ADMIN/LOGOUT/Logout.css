@@ -1,0 +1,28 @@
+/* LOGOUT BUTTON */
+
+.logout-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 12px 20px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.logout-btn:hover {
+  background: #ff4d4d;
+  padding-left: 25px;
+  color: #fff;
+}
+
+/* icon */
+.logout-btn svg {
+  font-size: 17px;
+}

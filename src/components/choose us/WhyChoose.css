@@ -1,0 +1,271 @@
+/* ================= SECTION ================= */
+.why-section {
+  padding: 100px 20px;
+  background: linear-gradient(to right, #f5f9ff, #ffffff);
+}
+
+/* ================= CONTAINER ================= */
+.why-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap; /* stack on small screens */
+  gap: 50px;
+}
+
+/* ================= CONTENT ================= */
+.why-content {
+  flex: 1;
+  min-width: 280px;
+  padding-left: 40px;
+}
+
+.why-subtitle {
+  font-family:'Kaushan Script',cursive;
+  font-size:16px;
+  color:#3bbbf7;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.why-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0d2b4e;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+.why-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+
+/* ================= LIST ================= */
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.why-list li {
+  display: flex;
+  align-items: flex-start; /* tick aligns with first line of text */
+  gap: 12px;
+  font-size: 16px;
+  color: #333;
+  transition: 0.3s;
+  width: 100%;
+  line-height: 1.5;
+  justify-content: flex-start; /* ALWAYS left-aligned */
+  text-align: left;           /* text always left */
+}
+
+.why-list li:hover {
+  transform: translateX(5px);
+  color: #1e88e5;
+}
+
+.tick-icon {
+  color: #1e88e5;
+  font-size: 18px;
+  flex-shrink: 0; /* prevents tick from shrinking */
+  margin-top: 2px; /* aligns tick with first line of text */
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ================= BUTTON ================= */
+.why-btn {
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.why-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.3);
+}
+
+/* ================= IMAGE WRAPPER ================= */
+.why-image-wrapper {
+  flex: 1;
+  min-width: 280px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= IMAGE STACK ================= */
+.bg-stack {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+}
+
+.img-bg {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  z-index: 0;
+  transition: 0.4s ease;
+}
+
+.img-front {
+  position: absolute;
+  width: 48%;
+  border-radius: 16px;
+  z-index: 2;
+  transition: 0.4s;
+}
+
+.img-front-left {
+  bottom: 0;
+  left: 0;
+}
+
+.img-front-right {
+  bottom: 0;
+  right: 0;
+}
+
+.bg-stack:hover .img-bg {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.bg-stack:hover .img-front {
+  transform: scale(1.06);
+}
+
+/* ================= LARGE SCREEN ================= */
+@media (max-width: 1200px) {
+  .why-content {
+    padding-left: 20px;
+  }
+  .why-title {
+    font-size: 36px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .why-container {
+    flex-direction: column-reverse; /* image below content */
+    text-align: left; /* keep left-aligned */
+    gap: 30px;
+  }
+
+  .why-content {
+    padding-left: 0;
+  }
+
+  .why-image-wrapper {
+    padding-right: 0;
+  }
+
+  .why-title {
+    font-size: 30px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .why-section {
+    padding: 70px 15px;
+  }
+
+  .why-title {
+    font-size: 26px;
+  }
+
+  .why-text {
+    font-size: 15px;
+  }
+
+  .bg-stack {
+    max-width: 380px;
+  }
+
+  .img-bg {
+    width: 80%;
+  }
+
+  .img-front {
+    width: 52%;
+  }
+
+  .why-btn {
+    width: 100%;
+  }
+
+  .why-list li {
+    font-size: 15px;
+    gap: 10px;
+    justify-content: flex-start; /* keep left aligned */
+    text-align: left;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 576px) {
+  .why-title {
+    font-size: 22px;
+  }
+
+  .why-text {
+    font-size: 14px;
+  }
+
+  .bg-stack {
+    max-width: 300px;
+  }
+
+  .img-front {
+    width: 55%;
+  }
+
+  .why-list li {
+    font-size: 14px;
+    gap: 8px;
+    justify-content: flex-start; /* left aligned */
+    text-align: left;
+  }
+}
+
+/* ================= EXTRA SMALL ================= */
+@media (max-width: 400px) {
+  .why-title {
+    font-size: 20px;
+  }
+
+  .bg-stack {
+    max-width: 260px;
+  }
+
+  .why-list li {
+    font-size: 13px;
+    gap: 6px;
+    justify-content: flex-start; /* left aligned */
+    text-align: left;
+  }
+}

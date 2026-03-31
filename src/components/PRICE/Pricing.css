@@ -1,0 +1,160 @@
+/* ================= SECTION ================= */
+
+.packages-section {
+  background: #f8fbff;
+  padding: 100px 8%;
+  text-align: center;
+}
+
+/* SUBTITLE */
+.why-subtitle {
+  font-family:'Kaushan Script',cursive;
+  font-size:20px;
+  color:#3bbbf7;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+/* HEADING */
+.section-title {
+  font-size: 44px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  color: #0d1b3d;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+
+
+
+/* ================= CONTAINER ================= */
+
+.packages-container {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;
+}
+
+/* ================= CARD ================= */
+
+.package-card {
+  background: rgba(255, 255, 255, 0.95);
+  width: 330px;
+  padding: 60px 40px;
+  border-radius: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+  position: relative;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+.package-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  border: 2px solid #facc15;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* Highlight Middle Card */
+.package-card.active {
+  transform: scale(1.07);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= ICON ================= */
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  transition: all 0.4s ease;
+}
+
+.icon.blue {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: #1d4ed8;
+}
+
+.icon.yellow {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #d97706;
+}
+
+.package-card:hover .icon {
+  transform: scale(1.2);
+}
+
+/* ================= TEXT ================= */
+
+.package-duration {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #facc15;
+  letter-spacing: 1px;
+}
+
+.package-card h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.package-card h1 {
+  font-size: 36px;
+  color: #2563eb;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.package-card h1 span {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.package-card p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .packages-container {
+    gap: 35px;
+  }
+
+  .package-card {
+    width: 90%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 576px) {
+  .packages-section {
+    padding: 80px 6%;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  .package-card {
+    padding: 45px 30px;
+  }
+
+  .package-card h1 {
+    font-size: 30px;
+  }
+}

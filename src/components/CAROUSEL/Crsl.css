@@ -1,0 +1,251 @@
+/* ===============================
+   HERO SECTION
+================================= */
+
+.hero-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  /* ❌ removed 90vh → caused big gap */
+  min-height:auto;
+
+  /* 🔥 reduced padding (main fix) */
+  padding:80px 5% 40px;
+
+  background:#ffffff;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* ===============================
+   LEFT CONTENT
+================================= */
+
+.hero-left{
+  flex:1;
+  min-width:260px;
+  max-width:600px;
+}
+
+/* Heading */
+
+.crsl-titlee{
+  font-size:clamp(28px,5vw,55px);
+  font-weight:900;
+  line-height:1.2;
+  margin-bottom:20px;
+  font-family:"Nunito",sans-serif;
+  color:#074085;
+}
+
+/* Subtitle */
+
+.hero-sub{
+  font-size:clamp(14px,2vw,18px);
+  color:#333;
+  line-height:1.6;
+  margin-bottom:25px;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  padding:12px 26px;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:40px;
+  transition:0.3s ease;
+  display:inline-block;
+  text-align:center;
+}
+
+.hero-btn.book{
+  background:#004aad;
+  color:#fff;
+  border:2px solid #004aad;
+}
+
+.hero-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ===============================
+   RIGHT SIDE
+================================= */
+
+.hero-right{
+  flex:1;
+  min-width:260px;
+  display:flex;
+  justify-content:center;
+}
+
+/* Swiper */
+
+.modern-swiper{
+  width:100%;
+  max-width:380px;
+  padding:20px 0;
+}
+
+.swiper-slide{
+  display:flex;
+  justify-content:center;
+}
+
+/* ===============================
+   IMAGE CARD
+================================= */
+
+.img-card{
+  width:100%;
+  max-width:300px;
+
+  /* 🔥 responsive height fix */
+  aspect-ratio:3/4;
+
+  background:#111;
+  border-radius:15px 120px 15px 15px;
+  overflow:hidden;
+}
+
+.img-card img,
+.img-card video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ===============================
+   LAPTOP
+================================= */
+
+@media(max-width:1200px){
+
+.hero-container{
+  padding:70px 5% 40px;
+  gap:30px;
+}
+
+}
+
+/* ===============================
+   TABLET (iPad FIX 🔥)
+================================= */
+
+@media(max-width:992px){
+
+.hero-container{
+  flex-direction:column;
+  text-align:center;
+
+  /* 🔥 MAIN FIX */
+  padding:60px 20px 40px;
+  gap:25px;
+}
+
+.hero-left{
+  max-width:650px;
+}
+
+.hero-buttons{
+  justify-content:center;
+}
+
+.hero-right{
+  margin-top:20px;  /* reduce big gap */
+}
+
+}
+
+/* ===============================
+   MOBILE
+================================= */
+
+@media(max-width:768px){
+
+.hero-container{
+ 
+  padding:60px 18px 35px;
+}
+
+.crsl-titlee{
+  margin-top: 40px;
+  font-size:26px;
+}
+
+.hero-buttons{
+  flex-direction:column;
+  align-items:center;
+}
+
+.hero-btn{
+  width:100%;
+  max-width:240px;
+}
+
+.img-card{
+  max-width:250px;
+}
+
+}
+
+/* ===============================
+   SMALL MOBILE
+================================= */
+
+@media(max-width:480px){
+
+.hero-container{
+  padding:50px 15px 30px;
+}
+
+.crsl-titlee{
+  font-size:22px;
+}
+
+.hero-sub{
+  font-size:13px;
+}
+
+.img-card{
+  max-width:220px;
+}
+
+}
+
+/* ===============================
+   EXTRA SMALL
+================================= */
+
+@media(max-width:360px){
+
+.crsl-titlee{
+  font-size:20px;
+}
+
+.img-card{
+  max-width:200px;
+}
+
+}
+
+/* ===============================
+   GLOBAL FIX (very important)
+================================= */
+
+body{
+  margin:0;
+  overflow-x:hidden; /* remove side scroll gap */
+}
