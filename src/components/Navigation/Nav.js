@@ -1,18 +1,16 @@
-
 import React from "react";
-import logo from "../IMAGES/Top_Shine__1_-removebg-preview.png";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../IMAGES/Top_Shine__1_-removebg-preview.png";
 import "./Nav.css";
 
 export default function Navigation() {
   return (
-    <nav className="navbar  custom-navbar navbar-expand-lg fixed-top shadow-sm">
+    <nav className="navbar custom-navbar navbar-expand-lg shadow-sm">
       <div className="container">
 
         {/* Logo + Brand */}
         <Link to="/" className="d-flex align-items-center text-decoration-none">
           <img src={logo} alt="Top Shine Logo" className="nav-logo" />
-          <span className="brand-text text-light"></span>
         </Link>
 
         {/* Toggle Button */}
@@ -53,21 +51,9 @@ export default function Navigation() {
                 More
               </a>
               <ul className="dropdown-menu">
-                <li>
-                  <NavLink className="dropdown-item" to="/testmonial">
-                    Testimonial
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-item" to="/ourteam">
-                    Our Team
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-item" to="/ourworks">
-                    Our Works
-                  </NavLink>
-                </li>
+                <li><NavLink className="dropdown-item" to="/testimonial">Testimonial</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/ourteam">Our Team</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/ourworks">Our Works</NavLink></li>
               </ul>
             </li>
 
@@ -79,11 +65,8 @@ export default function Navigation() {
               <NavLink className="nav-link" to="/contact">Contact</NavLink>
             </li>
 
-            {/* Booking Button */}
             <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <NavLink to="/book" className="btn booking-btn">
-                Booking
-              </NavLink>
+              <NavLink to="/book" className="btn booking-btn">Booking</NavLink>
             </li>
 
           </ul>

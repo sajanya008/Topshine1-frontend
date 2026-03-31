@@ -1,7 +1,6 @@
 /* ===============================
    NAVBAR
 ================================= */
-
 .custom-navbar {
   background: #ffffff;
   height: 80px;
@@ -15,12 +14,12 @@
   transition: 0.3s ease;
 }
 
-/* Navbar dark when menu open */
+/* Navbar dark when menu open (for mobile toggle) */
 .custom-navbar.menu-open {
   background: #004aad;
 }
 
-/* Prevent content hiding */
+/* Prevent content hiding under navbar */
 body {
   padding-top: 90px;
   margin: 0;
@@ -36,17 +35,15 @@ body {
 /* ===============================
    LOGO
 ================================= */
-
 .nav-logo {
-  margin-top: 9px;
-  width: 250px;
+  margin-top: 5px;
+  width: 220px;
   height: auto;
 }
 
 /* ===============================
    NAV LINKS
 ================================= */
-
 .nav-link {
   font-weight: 500;
   font-size: 16px;
@@ -68,7 +65,6 @@ body {
 /* ===============================
    BOOK BUTTON
 ================================= */
-
 .booking-btn {
   background: rgb(84, 195, 231);
   color: #ffffff !important;
@@ -85,7 +81,7 @@ body {
   color: #ffffff !important;
 }
 
-/* IMPORTANT: keep button look even when active */
+/* Keep button look even when active */
 .booking-btn.active,
 .nav-link.booking-btn.active {
   background: rgb(10, 152, 199) !important;
@@ -97,7 +93,6 @@ body {
 /* ===============================
    TOGGLER
 ================================= */
-
 .navbar-toggler {
   border: 2px solid #004aad;
   padding: 6px 10px;
@@ -115,16 +110,14 @@ body {
 /* ===============================
    TABLET / MOBILE
 ================================= */
-
 @media (max-width: 991px) {
-
   .custom-navbar {
     height: auto;
     padding: 15px 20px;
   }
 
   .nav-logo {
-    width: 95px;
+    width: 120px;
   }
 
   /* Mobile menu */
@@ -132,11 +125,10 @@ body {
     background: #004aad;
     padding: 20px;
     border-radius: 12px;
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: center;
   }
 
-  /* Menu links */
   .nav-link {
     display: block;
     margin: 12px 0;
@@ -148,12 +140,10 @@ body {
     color: #9ad0ff !important;
   }
 
-  /* Active link mobile */
   .nav-link.active:not(.booking-btn) {
     color: #9ad0ff !important;
   }
 
-  /* Book button mobile */
   .booking-btn {
     background: #ffffff;
     color: #004aad !important;
@@ -168,26 +158,21 @@ body {
     color: #004aad !important;
   }
 
-  /* Active book button mobile */
   .booking-btn.active {
     background: #ffffff !important;
     color: #004aad !important;
   }
-
 }
 
 /* ===============================
    SMALL MOBILE
 ================================= */
-
 @media (max-width: 600px) {
-
   .nav-logo {
-    width: 85px;
+    width: 100px;
   }
 
   .nav-link {
     font-size: 16px;
   }
-
 }
